@@ -1,0 +1,33 @@
+ALGORITHM text_analyze
+VAR
+    str : STRING ="hello world.";
+    i :INTEGER = 0;
+    c : CHAR : ="";
+    nb_vow : INTEGER :=0;
+    nb_char : INTEGER : =0;
+    nb_word : INTEGER : =0
+BEGIN
+// FOR i FROM 0 TO str.length -1 STEP 1  DO
+//     IF (str[i]===" ") THEN
+//         nb_word := nb_word+1
+//     END_IF*
+//     IF (c = "a" OR c="i" OR c="u" OR c="e" OR c="o" OR c="y") THEN
+//             nb_vow := nb_vow+1
+//         END_IF
+//         nb_char := nb_char+1
+// END_FOR
+    WHILE (c <> ".") DO
+        read(c);
+        nb_char := nb_char+1
+        IF (c = "a" OR c="i" OR c="u" OR c="e" OR c="o" OR c="y") THEN
+            nb_vow := nb_vow+1
+        END_IF
+        IF (c = " ") THEN
+            nb_word := nb_word+1
+        END_IF
+    END_WHILE
+    write("the length of sentence is " , nb_char);
+    write("the number of words is " , nb_word+1);
+    write("the number of vow is " , nb_vow);
+
+END
